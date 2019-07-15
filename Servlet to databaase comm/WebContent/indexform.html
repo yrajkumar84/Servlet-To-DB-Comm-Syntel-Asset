@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Form</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  
+      <link rel="stylesheet" href="css/style1.css">
+
+  
+</head>
+
+<body>
+    <div class="container">
+    <div class="wrapper">
+      
+      <form class="form-wrapper" action="form1" onsubmit="return validate(this)">
+        <fieldset class="section is-active">
+             <h3>Project Details</h3>
+            <input type="text" name="projname" id="projname" placeholder="Project Name" onclick="return projectNameValidation(this.value)" required/>
+            <input type="text" name="projtid" id="projtid" placeholder="Project ID" onclick="return projectIdValidation(this.value)" required/>
+            <input type="text" name="vertical" id="vertical" placeholder="Vertical Details" onclick="return projectVerticalValidation(this.value)" required/>
+            <input type="text" name="pticket" id="pticket" placeholder="Ticket No" onclick="return projectTicketValidation(this.value)" required/>
+
+            <h2>Floor  details</h2>
+           <div class="row cf">
+                <div class="four col">
+                  <input type="text" name="building" id="building" placeholder="Building" onclick="return projectBuildingValidation(this.value)" required/>
+                </div>
+                <div class="four col">
+                 <input type="text" name="floor" id="floor" placeholder="Floor" onclick="return projectFloorValidation(this.value)" required/>
+                </div>
+                <div class="four col">
+                  <input type="text" name="wing" id="wing" placeholder="Wing" onclick="return projectWingValidation(this.value)" required/>
+                </div>
+                <div class="four col">
+                  <input type="text" name="desk" id="desk" placeholder="Desk no" onclick="return projectDeskValidation(this.value)" required/>
+                </div>
+          </div>
+          <h2>Employee details</h2>
+            <input type="text" name="empname" id="empname" placeholder="Employee Name" onclick="return projectEmployeeValidation(this.value)" required/>
+            <input type="text" name="empid" id="empid" placeholder="Employee ID" onclick="return projectIdValidation(this.value)" required/>
+         
+            <h2>Asset details</h2>
+            <input type="text" name="assetid" id="assetid" placeholder="Asset ID" onclick="return projectAssetValidation(this.value)" required/>
+            <input type="text" name="serialno" id="serialno" placeholder="Serial No" onclick="return projectSerialValidation(this.value)" required/>
+            <input type="date" name="allocdate" id="allocdate" placeholder="Allocation Date" onclick="return projectAllocationValidation(this.value)" required/>
+            <input type="text" name="hostname" id="hostname" placeholder="Host Name" onclick="return projectHostnameValidation(this.value)" required/>
+            <br>
+            <br>
+            <input type="hidden" value="no" name="vflag"/>
+            <input  class="submit" type="submit" name="submit">
+            <input class="reset" type="reset" name="reset"> 
+            
+        </fieldset> 
+         
+      </form>
+    </div>
+  </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+
+    <script src="js/indexform.js"></script>
+
+</body>
+</html>
